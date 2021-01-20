@@ -1,1 +1,90 @@
 
+#agoraLogo {
+    width: 120px;
+    height: 40px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+
+}
+#agoraComputer{
+    height: 250px;
+    margin: 25px; 
+    margin-bottom: 100px;
+    float: center;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.left-pane{
+    flex: 1;
+    width: 20vw;
+    height: 72vh;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    
+}
+.right-pane{
+    flex: 1;
+    background-color: white;
+    
+}
+#leftText {
+    color: white;
+    font-size: 20px;
+}
+#blueText{
+    color: #099dfd;
+}
+#container{
+    background-color: #099dfd;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 75px;
+    margin-left: 75px;
+}
+#flexContainer{
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 0 40px rgb(184, 184, 184);
+}
+#loginText{
+    font-size: 35px;
+}
+#loginDiv{
+    margin: 100px;
+}
+#computerDiv{
+     margin: 100px;
+}
+
+input{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 10px;
+    padding: 5px;
+    width: 80%;
+    font-size: 1.25rem;
+    border: 2px solid #099dfd;
+    border-radius: 5px;
+}
+.email{
+    margin-top: 30px;
+}
+
+.loginButton{
+    width: 20%;
+    margin-left: 50px;
+    background: #099dfd;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    color: white;
+    border: none;
+    font-size: 1.05rem;
+    border-radius: 10px;
+}
