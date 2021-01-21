@@ -22,13 +22,73 @@
                         <div id="loginDiv">
                             <span id="loginText">Login and enjoy<span id="blueText"> unlimited </span>video calling</span>
                         </div>
-                        <input type="text" id="email" placeholder="Email"/>
-                        <br/><br/>
-                        <input type="password" id="password" placeholder="password"/>
-                        <br/><br/>
-                        <button class="loginButton">Login</button>
+                        <!-- type = submit bc form-->
+                        <form action="./index.html" onSubmit="return validate()"> <!-- could take php function, upon submit ... reload page-->
+                            <input type="text" id="email" placeholder="Email"/>
+                            <br/><br/>
+                            <input type="password" id="password" placeholder="password"/>
+                            <br/><br/>
+                            <button type="submit" onclick="validate()"class="loginButton">Login</button> 
+                        </form>
                     </div>
                 </div>
             </div>
+    <script>
+        /*
+        // dynamic variable --> can change its type 
+        // Variables~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        
+        let a = 12;
+        console.log(a);
+        
+        let b = "12"
+        // Conditionals~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+        if(a==b){ // == is without type, === includes type
+            console.log("equal");
+        } else {
+            console.log("Not equal");
+        }
+        // Loops~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        for(let i = 0; i<a; i++) {
+            console.log(i);
+        }
+        // Strings~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        let name = "Elana";
+        let fullName = name.concat(" ", "Sverdlik", " ","Anything")
+        let subName = name.substr(0, 3) // first index is inclusive, second index is not inclusive
+        let sliceName = fullName.slice(-4, -3) // this function still confuses me a bit 
+        console.log(sliceName)
+        console.log(fullName)
+        console.log(subName);
+        // characters are case sensistive --> b != B
+        */
+       // functions are not run at the moment of initiation 
+       function validate(){
+           let email = document.getElementById("email");
+           console.log(email.value);
+           let password = document.getElementById("password");
+           console.log(password.value);
+        // Checking that the email and password are being formatted correctly ( red if not )
+           let readyToLogin = false;
+            if(email.value.match(/\S+@\S+/)){
+                email.className = "";
+                readyToLogin =  false;
+
+                if(password.value.length >= 8) {
+                    password.className = "";
+                    readyToLogin = true;
+                } else {
+                    password.className = "incorrect"
+                    readyToLogin = false;
+                }
+           } else {
+               email.className = "incorrect"
+               readyToLogin = false;
+           }
+           return readyToLogin;
+           // looks for any string that has the @ sign in between and has charcters in front of and behind it 
+       }
+    </script>
     </body>
 </html>

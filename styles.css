@@ -88,3 +88,6 @@ input{
     font-size: 1.05rem;
     border-radius: 10px;
 }
+.incorrect{
+    border: 2px solid red;
+}
