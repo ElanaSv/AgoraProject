@@ -77,12 +77,12 @@ input{
 
 .loginButton{
     width: 20%;
-    margin-left: 20px;
+    margin-left: 50px;
     background: #099dfd;
     margin-top: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 5px;
+    padding-left: 15px;
     color: white;
     border: none;
     font-size: 1.05rem;
